@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c482project.AddPartsScreenController">
+   <children>
+      <Label layoutX="14.0" layoutY="32.0" text="Add Part" />
+      <RadioButton fx:id="inHouse" layoutX="110.0" layoutY="32.0" mnemonicParsing="false" onAction="#setCompanyNameMachineIDLabel" text="In-House" />
+      <RadioButton fx:id="outSourced" layoutX="189.0" layoutY="32.0" mnemonicParsing="false" onAction="#setCompanyNameMachineIDLabel" text="Outsourced" />
+      <VBox layoutX="38.0" layoutY="100.0" prefHeight="228.0" prefWidth="100.0" spacing="18.0">
+         <children>
+            <Label text="ID" />
+            <Label text="Name" />
+            <Label text="Inv" />
+            <Label text="Price/Cost" />
+            <Label text="Min" />
+            <Label text="Max" />
+            <Label fx:id="compNameMachineIDLabel" text="Company Name" />
+         </children>
+      </VBox>
+      <VBox layoutX="172.0" layoutY="96.0" prefHeight="247.0" prefWidth="112.0" spacing="10.0">
+         <children>
+            <TextField fx:id="IDText" editable="false" text="Auto Gen - Disabled">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="partNameText" text="Part Name" />
+            <TextField fx:id="invText" text="Inv" />
+            <TextField fx:id="priceCostText" text="Price/Cost" />
+            <TextField fx:id="minText" text="Min" />
+            <TextField fx:id="maxText" text="Max" />
+            <TextField fx:id="compNameMachineIDText" text="Company Name" />
+         </children>
+      </VBox>
+      <Button fx:id="saveButton" layoutX="172.0" layoutY="353.0" mnemonicParsing="false" onAction="#saveButtonPressed" text="Save" />
+      <Button fx:id="cancelButton" layoutX="232.0" layoutY="353.0" mnemonicParsing="false" onAction="#cancelButtonPressed" text="Cancel" />
+   </children>
+</AnchorPane>
